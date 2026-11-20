@@ -1,0 +1,131 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.navbar {
+    background-color: #1e293b;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h2 { margin: 0; font-size: 22px; }
+#logout-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#logout-btn:hover { background-color: #dc2626; }
+
+
+.form-container, .list-container {
+    background: white;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+h3 { margin-top: 0; color: #1e293b; }
+
+
+input {
+    padding: 12px;
+    margin: 5px 10px 15px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    width: calc(25% - 15px);
+    box-sizing: border-box;
+}
+button[type="submit"] {
+    background-color: #10b981;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.student-item {
+    background: #f8fafc;
+    border-left: 5px solid #3b82f6;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.student-info h3 { margin: 0 0 2px 0; font-size: 16px; color: #334155; }
+.student-info p { margin: 0; font-size: 13px; color: #64748b; }
+
+
+.action-buttons {
+    display: flex;
+    gap: 8px; 
+}
+
+
+.btn-edit {
+    background-color: #f59e0b;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-edit:hover { background-color: #d97706; }
+
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-delete:hover { background-color: #dc2626; }
+
+
+#edit-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    z-index: 1000;
+}
+#edit-modal h2 { margin-top: 0; text-align: center; }
+#edit-modal input { width: 100%; margin: 8px 0; }
+#edit-modal button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+#edit-modal button[type="submit"] { background: #3b82f6; color: white; }
+#edit-modal button[type="button"] { background: #94a3b8; color: white; }

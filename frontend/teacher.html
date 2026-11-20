@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+    // जर युजर Admin नसेल तर लगेच डॅशबोर्डवर परत पाठव
+    if (localStorage.getItem('role') !== 'admin') {
+        alert("Access Denied! Only Admin can access this page.");
+        window.location.href = 'dashboard.html';
+    }
+     window.history.pushState(null, "", window.location.href);
+    window.onpopstate = function () {
+        window.history.pushState(null, "", window.location.href);
+    };
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+
+    
+</head>
+<body>
+    <button type="button" id="cancel-btn">LogOut</button>
+    <div>
+        <h3>Teacher List</h3>
+       
+            <ul id="teacher-list">
+                
+            </ul>
+
+
+<a href="dashboard.html" style="display: inline-block; margin-bottom: 20px; text-decoration: none; color: #3b82f6; font-weight: bold;">&larr; Back to Dashboard</a>
+     
+    </div>
+
+    <div id="teacher-section">
+        <h3>Add new Teacher</h3>
+        <form id="teacher-form">
+            <input id="name" type="text" placeholder="Teacher Name" autocomplete="username" required>
+            <input id="email" type="text" placeholder="Email" autocomplete="email" required>
+            <input id="password" type="password" placeholder="Password" autocomplete="new-password" required>
+
+            <button type="submit">Add Teacher</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Student List</h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            name
+                        </th>
+                        <th>Course</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Assigned Teacher</th>
+                    </tr>
+
+                </thead>
+                <tbody id="student-list">
+
+                </tbody>
+            </table>
+        </div>
+            
+    </div>
+           
+    <script src="admin.js"></script>
+</body>
+</html>

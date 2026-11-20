@@ -1,0 +1,192 @@
+/* मुख्य बॅकग्राउंड */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logout बटण (वर उजव्या कोपऱ्यात) */
+#cancel-btn {
+    align-self: flex-end;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#cancel-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
+
+/* मुख्य डब्बे */
+div {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 900px; /* जास्त रुंद केलं जेणेकरून टेबल मावेल */
+    margin-bottom: 25px;
+}
+
+/* हेडिंग */
+h3 {
+    color: #1e293b;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* Teacher लिस्ट (ul) */
+#teacher-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#teacher-list li {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #8b5cf6;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#teacher-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#teacher-list li strong { font-size: 16px; color: #334155; }
+
+/* डिलीट बटन */
+#teacher-list li button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+#teacher-list li button:hover { background-color: #dc2626; }
+
+/* 🔥 टेबल डिझाईन (Student List) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden; /* कोपरे गोल दिसण्यासाठी */
+    box-shadow: 0 0 10px rgba(0,0,0,0.02);
+}
+
+/* टेबल हेडर */
+thead {
+    background-color: #f1f5f9;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    font-size: 15px;
+    color: #475569;
+    font-weight: 600;
+    border-bottom: 2px solid #cbd5e1;
+    text-transform: capitalize; /* पहिले अक्षर मोठं करण्यासाठी */
+}
+
+/* टेबल रो (प्रत्येक स्टुडंट) */
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+tbody tr:last-child {
+    border-bottom: none; /* शेवटच्या रो ला बॉर्डर नको */
+}
+
+tbody tr:hover {
+    background-color: #f8fafc; /* माऊस नेल्यावर हलका रंग बदलेल */
+}
+
+/* टेबल सेल्स */
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #334155;
+}
+
+/* टीचरचं नाव (Assigned Teacher) */
+td:last-child {
+    color: #8b5cf6;
+    font-weight: 600;
+}
+
+/* फॉर्म इनपुट्स */
+#teacher-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: 0.3s;
+}
+#teacher-form input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Add Teacher बटण */
+#teacher-form button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+#teacher-form button:hover {
+    background-color: #059669;
+}
+
+/* Back to Dashboard लिंक */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 600;
+    transition: 0.3s;
+}
+a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}

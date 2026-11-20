@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* ग्रॅडिएंट बॅकग्राउंड */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#login-section, #register-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* हळूवार येण्यासाठी */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#login-section h2, #register-section h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#login-section input, #register-section input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+#login-section input:focus, #register-section input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+/* बटण */
+#login-section button, #register-section button {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+#login-section button:hover, #register-section button:hover {
+    background: #5a67d8;
+}
+
+/* खालचा लिंक मजकूर */
+#login-section p, #register-section p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Login/Register टॉगल लिंक */
+#show-register, #show-login {
+    cursor: pointer;
+    color: #667eea;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#show-register:hover, #show-login:hover {
+    color: #4c51bf;
+    text-decoration: underline;
+}
